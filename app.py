@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 import pandas as pd
 import os
 
-server.secret_key = os.environ.get(‘SECRET_KEY’, ‘my-secret-key’)
+
 
 app = dash.Dash(__name__)
 sheetId2 = "16pb9hkyaWsBLwYAAUlLDW3oSk9pTa2c5ARMavxysrXk"
@@ -83,4 +83,4 @@ app.layout = html.Div(children=[
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True,port=int(os.environ.get("PORT", 5000)), host='0.0.0.0')
