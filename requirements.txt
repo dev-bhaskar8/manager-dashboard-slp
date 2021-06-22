@@ -1,5 +1,5 @@
 flask
-flask-limiter
+pandas
 requests
 gunicorn
 dash
