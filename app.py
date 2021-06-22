@@ -4,11 +4,11 @@ import dash_html_components as html
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
-import os
 
 
 
 app = dash.Dash(__name__)
+server = app.server
 sheetId2 = "16pb9hkyaWsBLwYAAUlLDW3oSk9pTa2c5ARMavxysrXk"
 sheetName2 = "SnapShot"
 sheetURL2 = f"https://docs.google.com/spreadsheets/d/{sheetId2}/gviz/tq?tqx=out:csv&sheet={sheetName2}"
@@ -83,4 +83,4 @@ app.layout = html.Div(children=[
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True,port=int(os.environ.get("PORT", 5000)), host='0.0.0.0')
+    app.run_server(debug=True)
