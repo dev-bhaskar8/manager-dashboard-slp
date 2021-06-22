@@ -4,6 +4,9 @@ import dash_html_components as html
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
+import os
+
+server.secret_key = os.environ.get(‘SECRET_KEY’, ‘my-secret-key’)
 
 app = dash.Dash(__name__)
 sheetId2 = "16pb9hkyaWsBLwYAAUlLDW3oSk9pTa2c5ARMavxysrXk"
